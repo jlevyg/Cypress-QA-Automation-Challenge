@@ -1,4 +1,4 @@
-Approach 
+Approach
 
 I picked one page for each interaction type instead of trying to cover the whole site:
 

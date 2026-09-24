@@ -10,7 +10,7 @@ CI/CD
 Organizing the suite
 
 - Tag tests so different runs can pick different sets: a quick @smoke set (the valid form submission, the alert, the multiselect) for every push, and everything else nightly.
-- Tag the D-001 test as @known-defect so it's clear it asserts a bug, and so it's easy to find and flip when the bug is fixed. 
+- Tag the D-001 test as @known-defect so it's clear it asserts a bug, and so it's easy to find and flip when the bug is fixed.
 - Keep one spec and one page object per page, as now. The three specs don't depend on each other, so they can run in parallel as the suite grows.
 
 Test data and structure

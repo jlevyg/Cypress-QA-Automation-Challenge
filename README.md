@@ -13,11 +13,12 @@ Setup:
 
 Run tests:
 
-`npm test` -  Headless run in Chrome.
+`npm test` - Headless run in Chrome.
 `npm run test:headed` - Same run, with visible browser
 `npm un test:open` - Cypress runner
 
 Coverage:
+
 - Forms (`/automation-practice-form`):
   - `TC-FORM-01`: Successful registration with required fields (name, email, gender, mobile) plus address, with verification of the confirmation modal and its results table.
   - `TC-FORM-02`: Required field validation preventing submission on an empty form.
@@ -29,7 +30,6 @@ Coverage:
   - `TC-ALT-01`: Trigger a simple browser alert and verify its message.
   - `TC-ALT-02`: Confirm dialog Cancel branch, verifying the dialog text and the "You selected Cancel" result.
   - `TC-ALT-03`: Prompt dialog input stubbing and verification of the confirmation message.
-
 
 Results:
 
