@@ -1,6 +1,6 @@
 import { SelectMenuPage } from '../pages/SelectMenuPage';
 
-describe('Select Menu',() =>{
+describe('Select Menu', () => {
   const menu = new SelectMenuPage();
   beforeEach(() => {
     menu.visit();
