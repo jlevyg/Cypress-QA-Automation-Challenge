@@ -1,0 +1,19 @@
+{
+  "validStudent": {
+    "firstName": "Jose",
+    "lastName": "Gomez",
+    "email": "josegomez@example.test",
+    "gender": "Male",
+    "mobile": "9876543210",
+    "address": "42 Cypress Av"
+
+  },
+  "invalidEmailStudent": {
+    "firstName": "Jose",
+    "lastName": "Gomez",
+    "email": "not-valid-email",
+    "gender": "Male",
+    "mobile": "9876543210"
+
+  }
+}
