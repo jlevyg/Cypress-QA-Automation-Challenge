@@ -29,6 +29,7 @@ The form submits. The "Thanks for submitting the form" modal shows `Date of Birt
 
 The test asserts the current (wrong) behavior so the main suite stays green while the bug is open. When it's fixed, the test will fail. At that point it should be changed to assert that the future date is rejected.
 
+**Evidence:** ![D-001 screenshot](artifacts/screenshots/practice-form.cy.js/D-001-future-date-accepted.png)
 ---
 
 ## D-002: State and City stay paired across a state change

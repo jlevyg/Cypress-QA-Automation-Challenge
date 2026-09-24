@@ -14,15 +14,11 @@ I picked one page for each interaction type instead of trying to cover the whole
 - **Test data:** Lives in `cypress/fixtures/students.json`.
 - **Selectors:** I use ids where DemoQA has stable ones. For the multiselect, React-Select generates ids that change if dropdowns are added or reordered, so I find it by its visible label.
 
-
-
 ## Flakiness and how I handled it
 
 - DemoQA's ad scripts throw uncaught errors that fail tests for no reason. I ignore ad and third-party script errors (matched by message) and let everything else fail.
 - Ads and the footer can cover buttons, so clicks go through `clickVisible()`, which scrolls the element into view and waits until it's visible.
 - `retries: 1` in run mode as a safety net. No test needed it in the final run.
-
-
 
 ## Known limitations
 
@@ -31,8 +27,6 @@ I picked one page for each interaction type instead of trying to cover the whole
 - The multiselect is located with `.next()` from its label, which depends on the page layout.
 - The plain alert test would still pass if no alert appeared (the assertion is inside the handler).
 - The D-001 test asserts the current (wrong) behavior so the main suite stays green. The alternative is to assert the correct behavior and move it to a quarantine folder.
-
-
 
 ## Challenges and insights
 
@@ -43,15 +37,14 @@ I picked one page for each interaction type instead of trying to cover the whole
 
 Latest run: 24 September 2026, `npm test` (headless Chrome, Cypress 16.1.0).
 
-| Spec                  | Tests | Passed | Failed | Duration  |
-| --------------------- | ----- | ------ | ------ | --------- |
-| `alerts.cy.js`        | 3     | 3      | 0      | 4.8 s     |
-| `practice-form.cy.js` | 4     | 4      | 0      | 7.8 s     |
-| `select-menu.cy.js`   | 1     | 1      | 0      | 2.7 s     |
+| Spec                  | Tests | Passed | Failed | Duration   |
+| --------------------- | ----- | ------ | ------ | ---------- |
+| `alerts.cy.js`        | 3     | 3      | 0      | 4.8 s      |
+| `practice-form.cy.js` | 4     | 4      | 0      | 7.8 s      |
+| `select-menu.cy.js`   | 1     | 1      | 0      | 2.7 s      |
 | **Total**             | **8** | **8**  | **0**  | **18.8 s** |
 
 - 100% pass rate, no skipped or pending tests.
 - No test needed a retry.
 - `TC-FORM-04` passing means defect D-001 is still present (see [DEFECTS.md](DEFECTS.md)).
 - D-002 was found manually and isn't covered by an automated test.
-

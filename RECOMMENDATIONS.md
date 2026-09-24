@@ -15,8 +15,6 @@ What I'd do next:
 - Tag the D-001 test as `@known-defect` so it's clear it asserts a bug, and so it's easy to find and flip when the bug is fixed.
 - Keep one spec and one page object per page, as now. The three specs don't depend on each other, so they can run in parallel as the suite grows.
 
-
-
 ## Test data and structure
 
 - Add a custom command that blocks DemoQA's ad domains with `cy.intercept` and call it before each visit. Right now I only ignore the errors ads throw and scroll past ads that cover buttons. Blocking them would prevent the problem instead of working around it. I left it out because of time.
@@ -31,4 +29,3 @@ What I'd do next:
 - Which tests needed a retry, and how often.
 - Total run time, so it stays fast enough to run on every push.
 - Bugs found by the suite versus bugs found later, to show where coverage is missing.
-
