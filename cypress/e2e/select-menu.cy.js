@@ -5,7 +5,7 @@ describe('Select Menu', () => {
   beforeEach(() => {
     menu.visit();
   });
-  it('selects multiple and removes colors in the React dropdown', () => {
+  it('TC-SEL-01: selects multiple and removes colors in the React dropdown', () => {
     const colors = ['Green', 'Blue'];
     menu.selectColors(colors);
     menu.expectSelectedColors(colors);
